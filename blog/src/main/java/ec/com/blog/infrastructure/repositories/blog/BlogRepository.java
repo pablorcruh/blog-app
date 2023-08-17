@@ -46,4 +46,11 @@ public class BlogRepository implements IBlogRepository {
     public Long count(Criteria criteria) {
         return getQuery(criteria).fetchCount();
     }
+
+    @Override
+    public Blog save(Blog blog) {
+        BlogModel blogModel = mapper.toBlogModel(blog);
+        blogModel = blogRepository.save(blogModel);
+        return mapper.toBlog(blogModel);
+    }
 }

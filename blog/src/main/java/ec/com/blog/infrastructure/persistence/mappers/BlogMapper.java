@@ -13,7 +13,7 @@ public interface BlogMapper {
     BlogModel toBlogModel(Blog blog);
 
     @InheritInverseConfiguration
-    Blog toBlog(BlogMapper blogMapper);
+    Blog toBlog(BlogModel blogModel);
 
     List<BlogModel> toBlogModelList(List<Blog> blogList);
 
