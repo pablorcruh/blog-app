@@ -1,25 +1,21 @@
-package ec.com.blog.domain.entities;
+package ec.com.blog.api.DTOs.responses;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-import java.util.Set;
 import java.util.UUID;
 
 @Getter
-@Setter
+@AllArgsConstructor
 @NoArgsConstructor
-public class Blog {
+public class ReadBlogResponse {
 
     private UUID id;
 
-    private String title;
+    private String content;
 
     private String description;
 
-    private String content;
-
-    private Set<Comment> comments;
+    private String title;
 }

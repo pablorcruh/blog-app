@@ -7,4 +7,6 @@ public interface IBlogRepository extends ISpecificationBaseRepository<Blog> {
 
     Blog save(Blog blog);
 
+    void delete (Blog blog);
+
 }

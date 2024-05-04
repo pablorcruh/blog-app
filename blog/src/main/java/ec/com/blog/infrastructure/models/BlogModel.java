@@ -9,6 +9,8 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 
@@ -36,5 +38,8 @@ public class BlogModel implements Serializable {
 
     @Column(nullable = false)
     private String content;
+
+    @OneToMany(mappedBy = "blogModel", cascade = CascadeType.ALL)
+    private Set<CommentModel> comments = new HashSet<>();
 
 }

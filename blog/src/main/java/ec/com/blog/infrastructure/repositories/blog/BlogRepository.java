@@ -53,4 +53,12 @@ public class BlogRepository implements IBlogRepository {
         blogModel = blogRepository.save(blogModel);
         return mapper.toBlog(blogModel);
     }
+
+    @Override
+    public void delete(Blog blog) {
+        BlogModel blogModel = mapper.toBlogModel(blog);
+        blogRepository.delete(blogModel);
+    }
+
+
 }

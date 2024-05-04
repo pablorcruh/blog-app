@@ -5,21 +5,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Set;
 import java.util.UUID;
 
 @Getter
 @Setter
 @NoArgsConstructor
-public class Blog {
+@AllArgsConstructor
+public class Comment {
 
     private UUID id;
-
-    private String title;
-
-    private String description;
-
-    private String content;
-
-    private Set<Comment> comments;
+    private String name;
+    private String email;
+    private String body;
+    private Blog blog;
 }
